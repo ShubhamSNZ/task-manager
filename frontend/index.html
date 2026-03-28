@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Task Manager</h1>
+
+    <!-- Filter -->
+    <div class="filters">
+        <button onclick="loadTasks()">All</button>
+        <button onclick="filterStatus('PENDING')">Pending</button>
+        <button onclick="filterStatus('COMPLETED')">Completed</button>
+    </div>
+    <div class="category-filter">
+        <input id="categoryFilter" placeholder="Search by category">
+        <button onclick="filterCategory()">Search</button>
+    </div>
+
+    <!-- Add Button -->
+    <button class="add-btn" onclick="openModal()">+ Add Task</button>
+
+    <!-- Task Grid -->
+    <div id="taskGrid" class="grid"></div>
+
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <h2>Add Task</h2>
+
+        <input id="title" placeholder="Title">
+        <input id="description" placeholder="Description">
+
+        <select id="priority">
+            <option value="HIGH">High</option>
+            <option value="MEDIUM">Medium</option>
+            <option value="LOW">Low</option>
+        </select>
+
+        <input type="date" id="dueDate">
+        <input id="category" placeholder="Category">
+
+        <button onclick="addTask()">Save</button>
+        <button onclick="closeModal()">Cancel</button>
+    </div>
+</div>
+<div id="toast" class="toast hidden"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #d6d7d9;
+    margin: 0;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 5px;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Filters */
+.filters {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.filters button {
+    background: #e0e7ff;
+    color: #3b5bdb;
+    border: none;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: #c7d2fe;
+}
+
+/* Category Filter Container */
+.category-filter {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+.category-filter input {
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: 1px solid #d1d5db;
+    outline: none;
+    width: 220px;
+    background: #f4f6fb;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+.category-filter input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.category-filter button {
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: none;
+    background: #10b981; /* emerald green */
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.category-filter button:hover {
+    background: #059669;
+    transform: scale(1.05);
+}
+
+/* Add Button */
+.add-btn {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 18px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #4338ca;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+/* Card */
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    transition: 0.2s;
+    transform: translateY(10px);
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Status */
+.status {
+    display: inline-block;
+    margin: 5px 0;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.pending {
+    background: #facc15;
+    color: #854d0e;
+}
+
+.completed {
+    background: #22c55e;
+    color: white;
+}
+
+/* Buttons */
+.card button {
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Button colors */
+.card button:nth-child(1) {
+    background: #22c55e;
+    color: white;
+}
+
+.card button:nth-child(2) {
+    background: #ef4444;
+    color: white;
+}
+
+.card button:nth-child(3) {
+    background: #3b82f6;
+    color: white;
+}
+
+button{
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    margin: 100px auto;
+    width: 320px;
+    border-radius: 10px;
+    transform: scale(0.8);
+    opacity: 0;
+    animation: modalOpen 0.3s ease forwards;
+}
+
+@keyframes modalOpen {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Inputs */
+.modal-content input,
+.modal-content select {
+    width: 100%;
+    margin: 6px 0;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #111827;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.hidden {
+    display: none;
+}
+
